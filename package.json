@@ -46,7 +46,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -88,7 +88,6 @@
     "jquery": "^3.5.0",
     "jsrsasign": "^8.0.15",
     "leaflet": "^1.6.0",
-    "ng-open-cv": "^0.3.1",
     "ngx-papaparse": "^4.0.4",
     "panzoom": "^9.2.3",
     "patch-package": "^6.2.2",
