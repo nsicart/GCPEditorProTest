@@ -21,13 +21,6 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { SmartimageComponent } from './smartimage/smartimage.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
-import { NgOpenCVModule, OpenCVOptions } from "ng-open-cv";
-
-const openCVConfig: OpenCVOptions = {
-    scriptUrl: `assets/opencv/opencv.js`,
-    wasmBinaryFile: 'wasm/opencv_js.wasm',
-    usingWasm: true
-};
 
 @NgModule({
     declarations: [
@@ -49,8 +42,7 @@ const openCVConfig: OpenCVOptions = {
         NgbModule,
         FontAwesomeModule,
         FormsModule,
-        LeafletModule.forRoot(),
-        NgOpenCVModule.forRoot(openCVConfig),
+        LeafletModule.forRoot()
     ],
     providers: [
         {
