@@ -49,10 +49,11 @@ export class GcpsMapComponent implements OnInit {
         this.markers.clearLayers();
         this.gcps.length = 0;
         this.storage.gcps.forEach(item => {
-            const coords = proj4.transform(
-                prj,
-                proj4.WGS84,
-                [item.easting, item.northing, item.elevation]);
+            const coords = proj4(
+    this.storage.projection.eq,
+    proj4.WGS84,
+    [item.easting, item.northing, item.elevation]
+);
             const elevation = isNaN(item.elevation) ? "None" : item.elevation;
 
             const markerLayer = marker(new L.LatLng(coords.y, coords.x, coords.z), {
