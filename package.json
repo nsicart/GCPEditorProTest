@@ -81,6 +81,8 @@
     "@types/proj4": "^2.5.5",
     "@types/rfdc": "^1.1.0",
     "bootstrap": "^4.4.1",
+    "ng-open-cv": "^1.0.0",
+
     "classlist.js": "^1.1.20150312",
     "epsg": "^0.5.0",
     "exifr": "^7.1.3",
