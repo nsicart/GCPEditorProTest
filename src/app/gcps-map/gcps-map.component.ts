@@ -56,7 +56,8 @@ export class GcpsMapComponent implements OnInit {
 );
             const elevation = isNaN(item.elevation) ? "None" : item.elevation;
 
-            const markerLayer = marker(new L.LatLng(coords.y, coords.x, coords.z), {
+            const markerLayer = marker(new L.LatLng(coords[1], coords[0], coords[2]), {
+
                 title: item.name,
                 riseOnHover: true,
                 icon: icon({
@@ -74,8 +75,8 @@ export class GcpsMapComponent implements OnInit {
             const domText = document.createElement("div");
             domText.innerHTML = `<b>${item.name}</b>
                 <hr class="my-2">
-                <b>Latitude:</b>&nbsp;${coords.y}<br />
-                <b>Longitude:</b>&nbsp;${coords.x}<br />
+                <b>Latitude:</b>&nbsp;${coords[1]}<br />
+                <b>Longitude:</b>&nbsp;${coords[0]}<br />
                 <b>Elevation:</b>&nbsp;${elevation}<br/>
                 <a style="color: #fff;" class="btn btn-sm btn-primary mt-2" href="#/images-tagger/${encodeURIComponent(item.name)}">${imageIcon} Tag</a>`;
             domPopup.append(domText);
