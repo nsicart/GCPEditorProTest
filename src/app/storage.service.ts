@@ -55,19 +55,8 @@ export class StorageService {
     }
 
     public getLicense(): LicenseInfo {
-        // return new DevLicense(); 
-        
-        if (!this.license) {
-            const licstr = localStorage.getItem("license") || "";
-            this.license = validate('gcpeditorpro', licstr);
-        }
-
-        if (!this.license) {
-            this.license = new DemoLicense();
-        }
-
-        return this.license;
-    }
+    return new DevLicense();
+}
 
     public saveLicense(license: string) {
         if (!validate('gcpeditorpro', license).demo) {
