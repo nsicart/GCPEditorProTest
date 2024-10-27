@@ -3,9 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { StorageService } from '../storage.service';
 import { ImageGcp, GCP } from '../gcps-utils.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'
-
 import * as rfdc from 'rfdc';
-import * as proj4 from 'proj4';
+import proj4 from 'proj4';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { GcpsDetectorService } from '../gcps-detector.service';
