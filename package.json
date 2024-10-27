@@ -87,7 +87,7 @@
     "file-saver": "^2.0.2",
     "jquery": "^3.5.0",
     "jsrsasign": "^8.0.15",
-    "leaflet": "^1.6.0",
+    "leaflet": "^1.5.17",
     "ngx-papaparse": "^4.0.4",
     "panzoom": "^9.2.3",
     "patch-package": "^6.5.1",
