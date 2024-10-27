@@ -4,7 +4,7 @@ import { GCP } from '../gcps-utils.service';
 import { Router } from '@angular/router';
 import { icon, Map, marker } from 'leaflet';
 import * as L from 'leaflet';
-import * as proj4 from 'proj4';
+import proj4 from 'proj4';
 import Autolayers from './Leaflet.Autolayers/leaflet-autolayers';
 import SimpleMarkers from './Leaflet.SimpleMarkers/Control.SimpleMarkers';
 import Geocoder from './Leaflet.Geocoder/Control.Geocoder';
