@@ -44,7 +44,7 @@ export class GcpsMapComponent implements OnInit {
     }
 
     private updateGcps(adjustMapBounds: Boolean = false): void{
-        const prj = proj4(this.storage.projection.eq);
+        const prj = proj4(this.storage.projection.eq) as proj4.Converter;
 
         this.markers.clearLayers();
         this.gcps.length = 0;
