@@ -111,12 +111,12 @@ export class ImagesTaggerComponent implements OnInit, OnDestroy {
         this.gcp = matches[0];
 
         // console.log("Using projection: ", this.storage.projection);
-        const prj = proj4.default.Proj(this.storage.projection.eq);
+        const prj = proj4.Proj(this.storage.projection.eq);
 
         // We need this to be able to calculate the distance
-        this.gcpCoords = proj4.default.transform(
+        this.gcpCoords = proj4.transform(
             prj,
-            proj4.default.WGS84,
+            proj4.WGS84,
             [this.gcp.easting, this.gcp.northing, this.gcp.elevation]);
 
         // console.log("GCP coords: ", this.gcpCoords);
