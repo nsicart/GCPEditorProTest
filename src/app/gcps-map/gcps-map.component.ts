@@ -44,14 +44,14 @@ export class GcpsMapComponent implements OnInit {
     }
 
     private updateGcps(adjustMapBounds: Boolean = false): void{
-        const prj = proj4.default.Proj(this.storage.projection.eq);
+        const prj = proj4(this.storage.projection.eq);
 
         this.markers.clearLayers();
         this.gcps.length = 0;
         this.storage.gcps.forEach(item => {
-            const coords = proj4.default.transform(
+            const coords = proj4.transform(
                 prj,
-                proj4.default.WGS84,
+                proj4.WGS84,
                 [item.easting, item.northing, item.elevation]);
             const elevation = isNaN(item.elevation) ? "None" : item.elevation;
 
@@ -208,7 +208,7 @@ https://a.tile.openstreetmap.org/{z}/{x}/{y}.png
             add_marker_callback: latlng => {
                 // Get marker location and convert to user proj
                 const {lat, lng} = latlng;
-                const [x, y] = proj4.default(this.storage.projection.eq, [lng, lat]);
+                const [x, y] = proj4(this.storage.projection.eq, [lng, lat]);
 
                 let counter = this.storage.gcps.length;
                 let name = 'gcp' + counter.toString().padStart(2, '0');
